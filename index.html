@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit Gym | Centro de Entrenamiento</title>
+    <style>
+        :root {
+            --primary: #ff4500;
+            --dark: #121212;
+            --card-bg: #1e1e1e;
+            --light: #f4f4f4;
+            --text-muted: #aaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--light);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1350&q=80') center/cover;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e03d00;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 0.5rem auto 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background: #0a0a0a;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #222;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">POWER<span>FIT</span></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Transforma Tu Cuerpo</h1>
+            <p>Equipamiento de última generación, entrenadores certificados y planes personalizados para alcanzar tus metas físicas.</p>
+            <a href="#planes" class="btn">Empieza Hoy</a>
+        </section>
+
+        <section id="servicios">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Zona Musculación</h3>
+                    <p>Amplia gama de maquinaria de peso libre y guiado para hipertrofia y fuerza.</p>
+                </div>
+                <div class="card">
+                    <h3>Área Cardio</h3>
+                    <p>Cintas de correr, elípticas y bicicletas con monitoreo biomecánico.</p>
+                </div>
+                <div class="card">
+                    <h3>Clases Dirigidas</h3>
+                    <p>Spinning, Cross-Training, Yoga y Pilates guiados por profesionales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="planes">
+            <h2 class="section-title">Planes de Membresía</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Básico</h3>
+                    <div class="price">$29<span>/mes</span></div>
+                    <p>Acceso a zona de pesas y cardio en horario regular.</p>
+                </div>
+                <div class="card">
+                    <h3>VIP Pro</h3>
+                    <div class="price">$49<span>/mes</span></div>
+                    <p>Acceso 24/7, clases dirigidas ilimitadas y 1 evaluación nutricional mensual.</p>
+                </div>
+                <div class="card">
+                    <h3>Personalizado</h3>
+                    <div class="price">$79<span>/mes</span></div>
+                    <p>Incluye entrenador personal exclusivo y plan alimenticio a medida.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2 class="section-title">Ubicación y Horarios</h2>
+            <div class="card">
+                <p><strong>Dirección:</strong> Av. Principal de la Ciudad, Edificio PowerFit</p>
+                <p><strong>Horarios:</strong> Lunes a Viernes (05:00 - 23:00) | Sábados y Domingos (07:00 - 20:00)</p>
+                <p><strong>Teléfono:</strong> +593 99 999 9999</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PowerFit Gym. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
